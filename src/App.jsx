@@ -9,7 +9,7 @@ import Analytics from './pages/Analytics';
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/Employee-Portal">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route
