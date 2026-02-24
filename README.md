@@ -2,6 +2,8 @@
 
 A modern, full-screen employee management portal built with React, featuring multi-role authentication, interactive data visualization, real-time camera capture, and geolocation mapping. Designed with a professional Microsoft-inspired UI and smooth GSAP animations.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-brightgreen?style=for-the-badge&logo=github)](https://balaji-133.github.io/Employee-Portal/)
+
 ![React](https://img.shields.io/badge/React-19.2.0-blue?logo=react)
 ![Vite](https://img.shields.io/badge/Vite-7.3.1-646CFF?logo=vite)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.2.1-38B2AC?logo=tailwind-css)
@@ -153,17 +155,6 @@ No environment variables required. API endpoint is hardcoded:
 ```javascript
 https://backend.jotish.in/backend_dev/gettabledata.php
 ```
-
-## 🚧 Roadmap
-
-- [ ] Role-based routing guards (HR/Director-only analytics)
-- [ ] TypeScript migration for type safety
-- [ ] Dark mode toggle with theme persistence
-- [ ] Export employee data to CSV/PDF
-- [ ] Advanced search with autocomplete
-- [ ] Real OAuth integration (Google/Microsoft)
-- [ ] Backend API with authentication tokens
-- [ ] Unit tests with Jest + React Testing Library
 
 ## 🤝 Contributing
 
