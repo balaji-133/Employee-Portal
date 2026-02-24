@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #0a4abf;
+  --color-brand-soft: #0ea5e9;
+  --color-surface: #f4f8fd;
+  --color-surface-alt: #eaf2fb;
+  --color-text-primary: #0f172a;
+  --color-text-muted: #475569;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--color-text-primary);
+    background:
+      radial-gradient(900px 420px at 10% -15%, rgba(14, 165, 233, 0.16), transparent),
+      radial-gradient(1200px 480px at 100% 10%, rgba(59, 130, 246, 0.15), transparent),
+      linear-gradient(180deg, #f8fbff 0%, #f2f7fd 60%, #eff5fc 100%);
+    font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@utility app-wrap {
+  @apply min-h-screen w-full;
+}
+
+@utility shell {
+  @apply flex min-h-screen w-full gap-0;
+}
+
+@utility panel {
+  background: rgba(244, 248, 253, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  border-radius: 0;
+}
+
+@utility card {
+  @apply rounded-2xl border border-slate-200/80 bg-white p-5 shadow-[0_10px_24px_rgba(15,23,42,0.08)];
+}
+
+@utility page-title {
+  @apply text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl;
+}
+
+@utility page-subtitle {
+  @apply mt-1 text-sm text-slate-600;
+}
+
+@utility primary-btn {
+  @apply inline-flex items-center justify-center rounded-xl bg-blue-700 px-4 py-2.5 text-sm font-semibold text-white shadow-[0_10px_18px_rgba(14,74,191,0.28)] transition hover:bg-blue-600 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+@utility ghost-btn {
+  @apply inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50;
+}
+
+@utility field {
+  @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100;
+}
+
+@utility top-stat {
+  @apply card rounded-2xl p-4;
+}
+
+.leaflet-container {
+  font-family: inherit;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(37, 99, 235, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(14, 74, 191, 0.18);
+  }
+}
+
+@utility fade-in {
+  animation: floatIn 0.45s ease-out both;
+}
+
+@utility pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@utility aurora-text {
+  @apply bg-gradient-to-r from-blue-700 via-sky-600 to-cyan-600 bg-clip-text text-transparent;
+}
+
+@utility soft-badge {
+  @apply inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700;
+}
